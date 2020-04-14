@@ -11,6 +11,7 @@ RUN catalina.sh start                           &&\
     catalina.sh stop
 
 COPY conf/tomcat-users.xml ${CATALINA_HOME}/conf/tomcat-users.xml
+COPY conf/Catalina/localhost/* ${CATALINA_HOME}/conf/Catalina/localhost/
 
 #RUN DEBIAN_FRONTEND=noninteractive  &&\
 #    apt-get update                  &&\
