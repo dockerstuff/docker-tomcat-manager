@@ -48,5 +48,13 @@ $ docker run -it -p 8080:8080 \
 ```
 Where you set `admin` and `good-password` as username and password, resp.
 
+
+# Further discussions
+
+About tomcat default image not providing default webapps anymore
+(which is undone by this container -- default apps are back here):
+* https://github.com/docker-library/tomcat/issues/124
+* https://github.com/docker-library/tomcat/pull/181
+
 /.\
 
