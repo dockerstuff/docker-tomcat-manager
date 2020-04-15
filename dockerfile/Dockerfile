@@ -13,7 +13,13 @@ RUN catalina.sh start                           &&\
 COPY conf/tomcat-users.xml ${CATALINA_HOME}/conf/tomcat-users.xml
 COPY conf/Catalina/localhost/* ${CATALINA_HOME}/conf/Catalina/localhost/
 
+COPY bin/startup.sh /startup.sh
+RUN chmod +x /startup.sh
+
 #RUN DEBIAN_FRONTEND=noninteractive  &&\
 #    apt-get update                  &&\
 #    apt-get install -y vim curl     &&\
 #    apt-get clean
+
+CMD ["/bin/bash", "--rcfile", "/startup.sh"]
+
